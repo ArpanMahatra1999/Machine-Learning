@@ -17,9 +17,11 @@ for point in points:
     sum_xy += (point[0] * point[1])
     sum_x2 += pow(point[0], 2)
 
+length = len(points)
+    
 print(sum_x, sum_y, sum_xy, sum_x2)
 # slope b2 and bias b1
-b2 = (sum_x * sum_y - 4 * sum_xy) / (pow(sum_x, 2) - 4 * sum_x2)
+b2 = (sum_x * sum_y - length * sum_xy) / (pow(sum_x, 2) - length * sum_x2)
 b1 = (sum_xy - sum_x2 * b2) / sum_x
 
 # equations
